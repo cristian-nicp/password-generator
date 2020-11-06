@@ -16,7 +16,9 @@ def password_generator():
 
     password = [] 
 
-    while len(password) < 19:
+    password_len = int(input('Escribe el número del largo de contraseña deseado: '))
+
+    while len(password) < password_len:
         random_character = random.choice(characters)
         password.append(random_character)
     
@@ -25,8 +27,8 @@ def password_generator():
 
 
 def run():
-    password = password_generator()
     print(message)
+    password = password_generator()
     print(f'Tu nueva contraseña es: {password}')
 
 
